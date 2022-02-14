@@ -16,6 +16,16 @@ const routes = [
     component: ()=>import('../views/datatype.vue'),
   },
   {
+    path: "/life",
+    name: "life",
+    component: ()=>import('../views/life.vue'),
+  },
+  {
+    path: "/ref",
+    name: "ref",
+    component: ()=>import('../views/ref.vue'),
+  },
+  {
     path: "/test1",
     name: "test1",
     component: test1,

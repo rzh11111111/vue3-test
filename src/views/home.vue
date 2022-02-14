@@ -1,9 +1,6 @@
 <template>
-  <h1>{{ msg }}</h1>
 
-  <button type="button" @click="count++">count is: {{ count }}</button>
-   <button type="button" @click="countjia">count is: {{ count }}</button>
- <button type="button" v-for="(item,index) in page" :key="index" @click="topush()"> {{ item.name }}</button>
+ <button type="button" v-for="(item,index) in page" :key="index" @click="topush(item.push)"> {{ item.name }}</button>
   <p>
     1111111111111
     <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -19,22 +16,28 @@ defineProps({
 const page = reactive([
     {
         name:'赋值',
-        push:'datatype'
-    }
+        push:'/datatype'
+    },
+    {
+        name:'生命周期',
+        push:'/life'
+    },
+    {
+        name:'组件ref',
+        push:'/ref'
+    },
 ] )
 
 
-const count = ref(0)
-function countjia(){
-  count.value++;
-}
+
 onBeforeMount(()=>{
   console.log('onBeforeMount')
 })
 
 const router = useRouter();
-const topush = () => {
-    router.push({path:'/datatype',query:{num:1}})
+const topush = (val) => {
+  console.log(val)
+    router.push({path:val,query:{num:1}})
 }
 
 </script>
