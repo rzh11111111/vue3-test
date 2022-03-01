@@ -10,7 +10,7 @@
    </div>
 </template>
 
-<script>
+<script setup>
 
 </script>
 
@@ -18,10 +18,10 @@
 .popup {
     position: fixed;
     width: 100%;
-    top: ; 
-    left: ;
+    top: 0; 
+    left: 0;
     height: 100%;
-    background-color: rgba(, , , 0.2);
+    background-color: rgba(0,0 , 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,15 +35,15 @@
    border-radius: 5px;
 }
 input[type="text"], input[type="password"] {
-    border: ;
-    outline: ;
+    border: 0;
+    outline: 0;
     border-bottom: 1px solid #eee;
     width: 80%;
     margin:  auto;
     font-size: 0.5em;
 }
 button {
-   border: ;
+   border: 0;
    margin-top: 50px;
    background-color:#8e44ad;
    color: #fff;

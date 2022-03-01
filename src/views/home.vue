@@ -27,8 +27,8 @@ const page = reactive([
         push:'/ref'
     },
     {
-        name:'异步组件defineAsyncComponent',
-        push:'/defineAsyncComponent'
+        name:'组件component',
+        push:'/component'
     },
 ] )
 

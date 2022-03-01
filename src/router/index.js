@@ -26,9 +26,9 @@ const routes = [
     component: ()=>import('../views/ref.vue'),
   },
   {
-    path: "/defineAsyncComponent",
-    name: "defineAsyncComponent",
-    component: ()=>import('../views/defineAsyncComponent.vue'),
+    path: "/component",
+    name: "component",
+    component: ()=>import('../views/component.vue'),
   },
   {
     path: "/test1",
