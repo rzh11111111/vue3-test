@@ -2,7 +2,7 @@
 <!-- 直接使用组件 -->
 <comred  msg="abcd"  @byVal="byVal"></comred>
 
-<p style="margint-top:10px;"></p>
+<p style="margin-top:10px;"></p>
 
 <!-- 动态组件切换 -->
 <component :is="typeCom[pageParams.type]"></component>
@@ -19,16 +19,17 @@ import { ref,reactive, defineAsyncComponent } from 'vue'
 // import LoginPopup from '../defineAsyncCom.vue'
 // 使用 Vue3 的 DefileAsyncComponent功能可让我们懒加载组件，说白了就是创建一个只有在需要时才会加载的异步组件。
 
+//
+import comred from '../components/comred.vue'
+import comblue from '../components/comblue.vue'
 
 //父子组件传值
 const byVal = (val) => {
   console.log(val);// 输出子组件的值
 }
 
-//动态组件切换
-import comred from '../components/comred.vue'
-import comblue from '../components/comblue.vue'
 
+//动态组件切换
 const pageParams = reactive({
   type:1
 })
@@ -67,5 +68,4 @@ const asyncModalWithOptions = defineAsyncComponent({
 
 
 <style scoped>
-
 </style>
